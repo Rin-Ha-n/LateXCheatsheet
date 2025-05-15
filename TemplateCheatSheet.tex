@@ -1,0 +1,44 @@
+
+% ========================================= TEMPLATE INFO =========================================
+%
+% Author:       Rin-Ha-n
+% Version:      0.0.1
+% Last updated: 2025-05-15
+% Brief:        A LaTeX template for summaries. See README.md for more information.
+% Inspired by:  https://gitlab.com/sstitz, https://github.com/FabianSuter, https://github.com/OST-Stud
+
+% ================================================================================================
+\documentclass[8pt, a4paper, twoside, landscape]{extarticle}
+% Font size:    8pt
+% Paper size:   A4
+% style:        twoside (needed, so odd and even pages have different margins)
+% orientation:  portrait. (use 'landscape' for landscape orientation)
+
+
+
+
+% ========================================= DOCUMENT INFO =========================================
+\def\title{CheatSheet Teamplate}						% title
+\def\shorttitle{TChSh}                              	% short title (displayed as PDF title)
+\def\dozent{Prof. Dr. XX. XX.} 				            % lecturer
+\def\semester{SS/AS 2025}								% semester
+\def\author{Ricca Aaron}                           	    % author(s)
+\def\repo{https://github.com/Rin-Ha-n/LateXCheatsheet}	% repository link
+\def\version{1.0.\today}                            	% version
+\def\pagelimit{4}                                   	% page limit -> causes pages after limit to be red
+\def\titleoption{ultra compact}                         % options: ultra compact, compact, normal
+\def\enableToC{false}                                   % enable table of contents (true/false)        
+
+
+
+% ================================= PACKAGES, SETUP AND COMMANDS ==================================
+\input{preamble.tex}
+
+% =========================================== DOCUMENT ============================================
+\begin{document}
+    \begin{multicols}{3}
+        \raggedcolumns
+        \cheatsheettitle
+        \input{section/chapter_01.tex}
+    \end{multicols}
+\end{document}
