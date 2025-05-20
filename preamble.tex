@@ -5,6 +5,9 @@
 % Only essential packages and the title block command are included.
 % ================================================================================================
 
+% --------------------------------- ONLY FOR TESTING ----------------------------------------------
+\usepackage{lipsum} % For generating dummy text
+
 % --------------------------------- School required package -------------------------------------------
 \usepackage{oststud} % Package from the OST school
 \usepackage{xcolor} % Color package needed for the oststud package
@@ -96,13 +99,13 @@
 \setcounter{tocdepth}{2}            % only display sections and subsections in toc
 
 \newcommand{\coloredsection}[1]{%
-  \colorbox{\sectioncolor!60}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesection\ #1}}}
+  \colorbox{\sectioncolor!60}{\parbox{\dimexpr\linewidth-2\fboxsep}{\thesection\ #1}}}
 
 \newcommand{\coloredsubsection}[1]{%
-  \colorbox{\subsectioncolor!40}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsection\ #1}}}
+  \colorbox{\subsectioncolor!40}{\parbox{\dimexpr\linewidth-2\fboxsep}{\thesubsection\ #1}}}
 
 \newcommand{\coloredsubsubsection}[1]{%
-  \colorbox{\subsubsectioncolor!20}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsubsection\ #1}}}
+  \colorbox{\subsubsectioncolor!20}{\parbox{\dimexpr\linewidth-2\fboxsep}{\thesubsubsection\ #1}}}
 
 \titleformat{\section}
   {\normalfont\Large\bfseries}
