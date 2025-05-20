@@ -16,12 +16,11 @@
 
 
 
-
 % ========================================= DOCUMENT INFO =========================================
 \def\title{CheatSheet Teamplate}						% title
 \def\shorttitle{TChSh}                              	% short title (displayed as PDF title)
 \def\dozent{Prof. Dr. XX. XX.} 				            % lecturer
-\def\semester{SS 2025}								% semester
+\def\semester{SS 2025}								    % semester
 \def\author{Ricca Aaron}                           	    % author(s)
 \def\repo{https://github.com/Rin-Ha-n/LateXCheatsheet}	% repository link
 \def\version{0.2.\today}                            	% version
@@ -29,6 +28,9 @@
 \def\titleoption{ultra compact}                         % options: ultra compact, compact, normal
 \def\enableToC{false}                                   % enable table of contents (true/false)        
 
+\def\sectioncolor{green}                                % section color   (Used green because as shown in psycology studies it calms you) 
+\def\subsectioncolor{green}                             % subsection color
+\def\subsubsectioncolor{green}                          % subsubsection color
 
 % ================================= PACKAGES, SETUP AND COMMANDS ==================================
 \input{preamble.tex} % Used to include minimum required packages and settings
@@ -38,7 +40,7 @@
     \begin{multicols}{3}
         \raggedcolumns
         \cheatsheettitle
-       I'm after the cheatsheet title but you may use the zinput command to include other files
+       I'm after the cheatsheet title but you may use the \verb!\input! command to include other files
         \input{section/chapter_01.tex}
     \end{multicols}
 \end{document}

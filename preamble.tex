@@ -7,9 +7,9 @@
 
 % --------------------------------- School required package -------------------------------------------
 \usepackage{oststud} % Package from the OST school
+\usepackage{xcolor} % Color package needed for the oststud package
 
 % --------------------------------- ENCODING AND FONTS -------------------------------------------
-\usepackage[utf8]{inputenc}      % UTF-8 encoding
 \usepackage[T1]{fontenc}         % T1 font encoding for better output
 \usepackage{times}               % Times font for main text
 \usepackage{inconsolata}         % Inconsolata font for monospaced text
@@ -94,7 +94,34 @@
 \setlength{\parindent}{0pt}         % no paragraph indentation
 
 \setcounter{tocdepth}{2}            % only display sections and subsections in toc
-% \setcounter{secnumdepth}{0}       % uncomment to disable section numbering
+
+\newcommand{\coloredsection}[1]{%
+  \colorbox{\sectioncolor!60}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesection\ #1}}}
+
+\newcommand{\coloredsubsection}[1]{%
+  \colorbox{\subsectioncolor!40}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsection\ #1}}}
+
+\newcommand{\coloredsubsubsection}[1]{%
+  \colorbox{\subsubsectioncolor!20}{\parbox{\dimexpr\textwidth-2\fboxsep}{\thesubsubsection\ #1}}}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {}
+  {0pt}
+  {\coloredsection}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {}
+  {0pt}
+  {\coloredsubsection}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}
+  {}
+  {0pt}
+  {\coloredsubsubsection}
+
 
 % ================================================================================================
 %                                   END OF PREAMBLE
